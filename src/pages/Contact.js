@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -89,4 +90,3 @@ export default function Contact() {
     </div>
   );
 }
-

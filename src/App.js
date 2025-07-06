@@ -1,3 +1,4 @@
+import { HelmetProvider } from "react-helmet-async";
 import Policies from "./pages/Policies";
 import Claims from "./pages/Claims";
 import Contact from "./pages/Contact";
@@ -10,9 +11,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Companies from './pages/policy/companies'; // no trailing /index needed
 
+<Routes>
+  {/* existing routes */}
+  <Route path="/policies/companies" element={<Companies />} />
+</Routes>
 function App() {
-  return (
+  return (  
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -34,6 +40,7 @@ function App() {
   );
 }
 
+<HelmetProvider>
+  <App />
+</HelmetProvider>
 export default App;
-
-

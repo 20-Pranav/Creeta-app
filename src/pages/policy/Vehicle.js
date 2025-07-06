@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 export default function Vehicle() {
   return (
     <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">

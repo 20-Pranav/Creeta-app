@@ -1,7 +1,23 @@
+import { Helmet } from "react-helmet-async";
+
 export default function Home() {
   return (
     <div className="space-y-16">
-      {/* Hero Section */}
+      {/* SEO META TAGS */}
+      <Helmet>
+        <title>Creeta Insurance – Affordable & Reliable Plans</title>
+        <meta
+          name="description"
+          content="Protect your life, health and vehicles with Creeta Insurance’s trusted, affordable plans tailored for you."
+        />
+        <meta
+          name="keywords"
+          content="insurance, health insurance, life insurance, vehicle insurance, India"
+        />
+        <meta name="author" content="Creeta Insurance" />
+      </Helmet>
+
+      {/* --- Hero Section (your existing content) --- */}
       <section className="bg-gradient-to-r from-blue-50 to-indigo-100 p-10 rounded-lg shadow-md">
         <div className="text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold text-indigo-700">
@@ -21,7 +37,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Short Section */}
+      {/* --- About Short Section --- */}
       <section className="text-center">
         <h2 className="text-2xl font-semibold text-gray-800">Why Choose Creeta?</h2>
         <p className="mt-2 text-gray-600 max-w-xl mx-auto">
