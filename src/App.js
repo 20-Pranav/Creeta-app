@@ -2,6 +2,9 @@ import Policies from "./pages/Policies";
 import Claims from "./pages/Claims";
 import Contact from "./pages/Contact";
 import React from "react";
+import Health from "./pages/policy/Health";
+import Life from "./pages/policy/Life";
+import Vehicle from "./pages/policy/Vehicle";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -20,6 +23,9 @@ function App() {
             <Route path="/policies" element={<Policies />} />
             <Route path="/claims" element={<Claims />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/policies/health" element={<Health />} />
+            <Route path="/policies/life" element={<Life />} />
+            <Route path="/policies/vehicle" element={<Vehicle />} />
           </Routes>
         </main>
         <Footer />
