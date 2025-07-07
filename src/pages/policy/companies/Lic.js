@@ -1,7 +1,9 @@
 export default function Lic() {
   return (
     <section className="bg-white text-gray-800 p-6 rounded shadow">
-      <h2 className="text-2xl font-semibold mb-2">LIC – Life Insurance Corporation of India</h2>
+      <h2 className="text-2xl font-semibold mb-2">
+        LIC – Life Insurance Corporation of India
+      </h2>
       <p className="mb-2">
         India’s largest life‑insurance provider offering Term, Endowment, Pension and Children plans.
       </p>

@@ -1,18 +1,24 @@
 import { Helmet } from "react-helmet-async";
+
 export default function Vehicle() {
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md">
-      <h1 className="text-4xl font-bold text-indigo-700 mb-6">Vehicle Insurance</h1>
-      <p className="text-lg text-gray-700 mb-4">
-        Protect your car or bike with our comprehensive Vehicle Insurance plans including third-party and own-damage coverage.
+    <div className="max-w-6xl mx-auto p-8">
+      <Helmet>
+        <title>Vehicle Insurance - Creeta</title>
+        <meta name="description" content="Protect your car or bike with comprehensive vehicle insurance from Creeta." />
+      </Helmet>
+      <h1 className="text-3xl font-bold text-indigo-700 mb-4">Vehicle Insurance</h1>
+      <p className="text-gray-700 mb-6">
+        Drive worry-free with Creeta’s vehicle insurance plans covering damage, theft, and third-party liabilities.
       </p>
-      <ul className="list-disc list-inside text-gray-700">
-        <li>Third-party liability insurance</li>
-        <li>Comprehensive vehicle insurance</li>
-        <li>Roadside assistance</li>
-        <li>Easy claim process</li>
+      <ul className="list-disc pl-6 text-gray-600">
+        <li>Comprehensive & third-party cover</li>
+        <li>Cashless claims at network garages</li>
+        <li>24x7 roadside assistance</li>
+        <li>Instant policy issuance</li>
       </ul>
     </div>
   );
 }
+
 

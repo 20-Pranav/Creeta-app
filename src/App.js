@@ -1,46 +1,53 @@
-import { HelmetProvider } from "react-helmet-async";
-import Policies from "./pages/Policies";
-import Claims from "./pages/Claims";
-import Contact from "./pages/Contact";
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+import HomePage from "./pages/HomePage";
+import Policies from "./pages/Policies";
+import Enquiry from "./pages/Enquiry";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+
 import Health from "./pages/policy/Health";
 import Life from "./pages/policy/Life";
 import Vehicle from "./pages/policy/Vehicle";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Companies from './pages/policy/companies'; // no trailing /index needed
+import Companies from "./pages/policy/companies";
 
-<Routes>
-  {/* existing routes */}
-  <Route path="/policies/companies" element={<Companies />} />
-</Routes>
+import Lic from "./pages/policy/companies/Lic";
+import StarHealth from "./pages/policy/companies/StarHealth";
+import NewIndiaAssurance from "./pages/policy/companies/NewIndiaAssurance";
+
 function App() {
-  return (  
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow p-4">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/policies" element={<Policies />} />
-            <Route path="/claims" element={<Claims />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/policies/health" element={<Health />} />
-            <Route path="/policies/life" element={<Life />} />
-            <Route path="/policies/vehicle" element={<Vehicle />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
+          <Navbar />
+          <main className="flex-grow max-w-6xl mx-auto p-6">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/policies" element={<Policies />} />
+              <Route path="/enquiry" element={<Enquiry />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/policies/health" element={<Health />} />
+              <Route path="/policies/life" element={<Life />} />
+              <Route path="/policies/vehicle" element={<Vehicle />} />
+              <Route path="/policies/companies" element={<Companies />} />
+              <Route path="/policies/lic" element={<Lic />} />
+              <Route path="/policies/star" element={<StarHealth />} />
+              <Route path="/policies/newindia" element={<NewIndiaAssurance />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 
-<HelmetProvider>
-  <App />
-</HelmetProvider>
 export default App;
+
