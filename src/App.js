@@ -14,11 +14,6 @@ import About from "./pages/About";
 import Health from "./pages/policy/Health";
 import Life from "./pages/policy/Life";
 import Vehicle from "./pages/policy/Vehicle";
-import Companies from "./pages/policy/companies";
-
-import Lic from "./pages/policy/companies/Lic";
-import StarHealth from "./pages/policy/companies/StarHealth";
-import NewIndiaAssurance from "./pages/policy/companies/NewIndiaAssurance";
 
 function App() {
   return (
@@ -36,10 +31,6 @@ function App() {
               <Route path="/policies/health" element={<Health />} />
               <Route path="/policies/life" element={<Life />} />
               <Route path="/policies/vehicle" element={<Vehicle />} />
-              <Route path="/policies/companies" element={<Companies />} />
-              <Route path="/policies/lic" element={<Lic />} />
-              <Route path="/policies/star" element={<StarHealth />} />
-              <Route path="/policies/newindia" element={<NewIndiaAssurance />} />
             </Routes>
           </main>
           <Footer />

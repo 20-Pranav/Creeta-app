@@ -27,7 +27,7 @@ export default function Navbar() {
   const navLinks = ["Home", "Enquiry", "Contact", "About"];
 
   return (
-    <nav className="bg-indigo-700 text-white" role="navigation">
+    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-indigo-700 to-blue-600 text-white shadow-lg z-50">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Brand */}
         <Link to="/" className="text-2xl font-bold">
@@ -64,7 +64,7 @@ export default function Navbar() {
                   <li key={to}>
                     <NavLink
                       to={to}
-                      className="block px-4 py-2 hover:bg-indigo-500"
+                      className="block px-4 py-2 text-white hover:bg-white/10"
                       onClick={closeAllMenus}
                       role="menuitem"
                     >
@@ -82,9 +82,11 @@ export default function Navbar() {
                 to={name === "Home" ? "/" : `/${name.toLowerCase()}`}
                 onClick={closeAllMenus}
                 className={({ isActive }) =>
-                  isActive
-                    ? "border-b-2 border-white text-white font-semibold"
-                    : "hover:border-b-2 hover:border-indigo-300 text-indigo-200"
+                  `px-3 py-1 rounded transition ${
+                    isActive
+                      ? "bg-white/20 text-white font-semibold"
+                      : "text-white hover:bg-white/10"
+                  }`
                 }
               >
                 {name}
@@ -119,10 +121,7 @@ export default function Navbar() {
               Policies <FaChevronDown />
             </button>
             {dropdownOpen && (
-              <ul
-                id="mobile-policies-menu"
-                className="pl-4 space-y-1"
-              >
+              <ul id="mobile-policies-menu" className="pl-4 space-y-1">
                 {[
                   { to: "/policies/health", label: "Health Insurance" },
                   { to: "/policies/life", label: "Life Insurance" },
@@ -132,7 +131,7 @@ export default function Navbar() {
                     <NavLink
                       to={to}
                       onClick={closeAllMenus}
-                      className="block py-1 hover:bg-indigo-600 rounded"
+                      className="block py-1 rounded text-white hover:bg-white/10"
                     >
                       {label}
                     </NavLink>
@@ -147,7 +146,7 @@ export default function Navbar() {
               <NavLink
                 to={name === "Home" ? "/" : `/${name.toLowerCase()}`}
                 onClick={closeAllMenus}
-                className="block py-2 pl-2 font-medium hover:bg-indigo-600 rounded"
+                className="block py-2 pl-2 rounded text-white hover:bg-white/10"
               >
                 {name}
               </NavLink>

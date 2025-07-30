@@ -18,16 +18,13 @@ export default function Home() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
 
-        <main className="flex-grow">
+        <main className="flex-grow pt-20">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/enquiry" element={<EnquiryPage />} />
             <Route path="/enquiry/:type" element={<EnquiryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/policies/health" element={<Companies />} />
-            <Route path="/policies/life" element={<Companies />} />
-            <Route path="/policies/vehicle" element={<Companies />} />
           </Routes>
         </main>
 
