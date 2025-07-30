@@ -1,6 +1,13 @@
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Health() {
+  const navigate = useNavigate();
+
+  const handleEnquiryClick = () => {
+    navigate("/enquiry/health");
+  };
   return (
     <div className="max-w-6xl mx-auto p-8 bg-white rounded-lg shadow-md">
       <Helmet>
@@ -19,11 +26,14 @@ export default function Health() {
         <li>Cashless Hospital Network</li>
         <li>Pre and Post Hospitalization Coverage</li>
         <li>Critical Illness Rider Options</li>
-      </ul>
-
-      <button className="mt-6 bg-indigo-700 text-white px-6 py-2 rounded hover:bg-indigo-800 transition">
-        Get Health Quote
-      </button>
+      </ul> 
+<Link to="/enquiry/health">
+  <button 
+  onClick={handleEnquiryClick}
+  className="mt-6 bg-indigo-700 text-white px-6 py-2 rounded hover:bg-indigo-800 transition">
+    Get Health Quote
+  </button>
+</Link>
     </div>
   );
 }

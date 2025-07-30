@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedin, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -43,7 +43,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-indigo-700 transition"
             >
-              <FaFacebookF size={20} />
+              <FaFacebook size={20} />
             </a>
             <a
               href="https://twitter.com"
@@ -61,7 +61,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="hover:text-indigo-700 transition"
             >
-              <FaLinkedinIn size={20} />
+              <FaLinkedin size={20} />
             </a>
           </div>
         </div>

@@ -5,7 +5,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 import HomePage from "./HomePage";
-import EnquiryPage from "./EnquiryPage";
+import EnquiryPage from "./Enquiry";  // file is Enquiry.js
+
 import ContactPage from "./ContactPage";
 import AboutPage from "./AboutPage";
 
@@ -21,6 +22,7 @@ export default function Home() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/enquiry" element={<EnquiryPage />} />
+            <Route path="/enquiry/:type" element={<EnquiryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/policies/health" element={<Companies />} />
